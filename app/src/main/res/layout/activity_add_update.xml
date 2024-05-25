@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Activity.AddUpdateActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/person"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter student fullname"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter student ID"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/layout1"
+        app:layout_constraintStart_toStartOf="@+id/layout1"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/studentIdEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter student subject"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/layout2"
+        app:layout_constraintStart_toStartOf="@+id/layout2"
+        app:layout_constraintTop_toBottomOf="@+id/layout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subjectEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter student address"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/layout3"
+        app:layout_constraintStart_toStartOf="@+id/layout3"
+        app:layout_constraintTop_toBottomOf="@+id/layout3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addressEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter student email"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/layout4"
+        app:layout_constraintStart_toStartOf="@+id/layout4"
+        app:layout_constraintTop_toBottomOf="@+id/layout4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Enter student phone number"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@+id/layout5"
+        app:layout_constraintStart_toStartOf="@+id/layout5"
+        app:layout_constraintTop_toBottomOf="@+id/layout5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Add"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/layout6"
+        app:layout_constraintStart_toStartOf="@+id/layout6"
+        app:layout_constraintTop_toBottomOf="@+id/layout6"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/person"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fullNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student Fullname"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_image"
+            app:layout_constraintStart_toStartOf="@+id/profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        <TextView
+            android:id="@+id/studentIdTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student ID"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/fullNameTxt"
+            app:layout_constraintStart_toStartOf="@+id/fullNameTxt"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameTxt" />
+        <TextView
+            android:id="@+id/subjectTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student subject"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/studentIdTxt"
+            app:layout_constraintStart_toStartOf="@+id/studentIdTxt"
+            app:layout_constraintTop_toBottomOf="@+id/studentIdTxt" />
+        <TextView
+            android:id="@+id/addressTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student address"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/subjectTxt"
+            app:layout_constraintStart_toStartOf="@+id/subjectTxt"
+            app:layout_constraintTop_toBottomOf="@+id/subjectTxt" />
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student email"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/addressTxt"
+            app:layout_constraintStart_toStartOf="@+id/addressTxt"
+            app:layout_constraintTop_toBottomOf="@+id/addressTxt" />
+        <TextView
+            android:id="@+id/phoneTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student phone number"
+            android:layout_marginTop="12dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/emailTxt"
+            app:layout_constraintStart_toStartOf="@+id/emailTxt"
+            app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:weightSum="1"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/phoneTxt"
+            app:layout_constraintStart_toStartOf="@+id/phoneTxt"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTxt">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editBtn"
+                android:layout_weight=".5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="Edit"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/edit"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/layout6"
+                app:layout_constraintStart_toStartOf="@+id/layout6"
+                app:layout_constraintTop_toBottomOf="@+id/layout6"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteBtn"
+                android:drawableLeft="@drawable/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="Delete"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".5"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/layout6"
+                app:layout_constraintStart_toStartOf="@+id/layout6"
+                app:layout_constraintTop_toBottomOf="@+id/layout6"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
